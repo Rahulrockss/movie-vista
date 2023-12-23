@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState,useEffect } from 'react'
 import './App.css'
+import {fetchDataFromApi} from '../src/utils/api'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  useEffect(()=>{
+    apiTesting();
+  },[])
+  const apiTesting =()=>{
+    fetchDataFromApi('/movie/popular')
+    .then((res)=>{
+      console.log(res)
+    })
+  }
+  
   return (
     <>
-<h1>Movie Vista</h1>
+<h1>Movie Vista </h1>
     </>
   )
 }
