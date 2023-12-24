@@ -1,7 +1,6 @@
 import React from 'react'
-import "./style.sccs"
 
-function Footer() {
+const Explore = () => {
   return (
     <div>
       
@@ -9,4 +8,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Explore
